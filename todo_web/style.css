@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#nav-out {
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+}
+
+ul {
+    display: flex;
+}
+
+#nav-in {
+    height: 40px;
+
+    margin-top: 20px;
+    width: 40%;
+    position: relative;
+    margin-left: 60%;
+   
+    
+
+}
+nav li {
+    color: white;
+    margin: auto;
+    list-style-type: none;
+    font-size: 18pt;
+    font-weight: lighter;
+   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-image: url('/todo_web/bg-red.png');
+}

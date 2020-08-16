@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            document.querySelector('#new-task').onsubmit = ()=> {
+
+            // creating new li element and putting its inner value what we entered
+            let li = document.createElement('li');
+            li.innerHTML = document.querySelector('#task').value;
+            // adding the li with its inner html value to the ul list by appending ul
+            document.querySelector('#tasks').append(li);
+            // clearing the value of entry field so that place holder is displayed
+            document.querySelector('#task').value = '';
+            //stops from from submitting aka reloading page
+            return false;
+        }
+        })
+        
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tasks</h1>
+    <ul id="tasks"></ul>
+    <form id="new-task">
+        <input id="task" type="text" autofocus placeholder="New Task">
+        <input type="submit">
+    </form>
+</body>
+</html>

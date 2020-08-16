@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{headline }}</h1>
+    <h2>{{now}}</h2>
+
+    <h1>Is it a new year ?</h1>
+    <h2>
+        {% if newyear %}
+            Happy new year.
+        {% else %}
+            Nah ! Better luck next day.
+        {%endif %}
+    </h2>
+
+    <h2>Show on friends page</h2>
+    <form action="{{url_for('friends')}}" method="post">
+        <input type="text", name="frandzz", placeholder="Enter name">
+        <button>Add</button>
+    </form>
+
+    <h2>Show on daily page</h2>
+        <form action="{{url_for('daily')}}" method="post">
+            <input type="text", placeholder="Enter Task", name="task">
+            <button>GO</button>
+        </form>
+
+    <a href="{{url_for('friends')}}">Goto Friends</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // set interval take two inputs , 1st a function, second time in millisecond
+            setInterval(count, 1000);
+
+            let val = 0;
+
+            function count(){
+                val++;
+                document.querySelector('#counter').innerHTML = val;
+            }
+        })
+
+        
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+</body>
+</html>

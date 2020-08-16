@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // if there is no item named counterx then create item named coiunterx in local storage and set its value as 0.
+        //local storage keeps the data in browser and when you open the browser again or reload it, the value of counter is retained.
+        // local storage is different from cookie , cookie is designed for the benefit of server - when server hit your domain  it gets info that is stored as cookie, 
+        //whereas local storage doesn't interact with server. 
+        if(!localStorage.getItem('counterx')){
+            localStorage.setItem('counterx', 0)
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            //set the value of h1 as 0 or whatever the value is stored in counterx if not running for first time.
+            document.querySelector('#counter').innerHTML = localStorage.getItem('counterx');
+            let val = localStorage.getItem('counterx');
+            document.querySelector('button').onclick = () => {
+                val++;
+                document.querySelector('#counter').innerHTML = val;
+                localStorage.setItem('counterx', val);
+
+            }
+        })
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="counter"></h1>
+    <button type="submit">Increase</button>
+</body>
+</html>
